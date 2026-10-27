@@ -10,8 +10,6 @@ Create named stacks of Windows apps, launch them together, close their windows t
 - Dark mode and a tray menu.
 - Generate a combined icon from up to four running apps. Windows decides how taskbar group icons are displayed; appearance can vary by Windows build, monitor, and other taskbar mods.
 
-The YouTube Music widget is a separate project and is not included.
-
 ## Run
 
 Windows 11 x64 with .NET Framework 4.8 is the initial target. Extract the release ZIP into a stable folder and run Stackify.exe. Keep Stackify.ico beside it. No administrator access is needed. Create a stack, then choose its apps. No personal stacks are bundled.
@@ -34,7 +32,7 @@ Run ./build.ps1 in PowerShell on Windows. It uses the .NET Framework compiler al
 
 ## Windhawk
 
-This application is a standalone .NET app, not a Windhawk .wh.cpp mod. It does not require the old Streaming Stack music bridge. The Windhawk catalog accepts single-file C++ mods; uploading this executable there is not supported. Do not install a music bridge just to use Stackify.
+Stackify is a standalone .NET desktop application, not a Windhawk `.wh.cpp` mod. It should be distributed as a Windows application rather than submitted to the Windhawk mod catalog.
 
 ## Privacy and removal
 
