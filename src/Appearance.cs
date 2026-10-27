@@ -8,7 +8,6 @@ using System.Windows.Forms;
 public sealed class Preferences
 {
     public bool DarkMode {get;set;}
-    public bool MusicWidget {get;set;}
     public Preferences(){DarkMode=true;}
     internal static Preferences Load(){var p=Path.Combine(AppPaths.Data,"preferences.json");try{return File.Exists(p)?(new JavaScriptSerializer().Deserialize<Preferences>(File.ReadAllText(p))??new Preferences()):new Preferences();}catch{return new Preferences();}}
     internal void Save(){File.WriteAllText(Path.Combine(AppPaths.Data,"preferences.json"),new JavaScriptSerializer().Serialize(this));}
@@ -17,7 +16,6 @@ static class Appearance
 {
     internal static bool Dark=true;
     internal static Color Background {get{return Dark?Color.FromArgb(24,25,31):Color.FromArgb(246,247,250);}}
-    internal static Color MusicBackground {get{return Dark?Color.FromArgb(23,23,23):Background;}}
     internal static Color Surface {get{return Dark?Color.FromArgb(35,37,45):Color.White;}}
     internal static Color Text {get{return Dark?Color.FromArgb(235,237,245):Color.FromArgb(25,27,34);}}
     [DllImport("user32.dll")]static extern bool ShowWindowAsync(IntPtr h,int command);
